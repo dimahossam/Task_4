@@ -1,3 +1,5 @@
+// Generate a unique identifier for this test run
+global.__TEST_RUN_ID__ = crypto.randomUUID();
 import { jest } from '@jest/globals';
 import '@testing-library/jest-dom';
 
@@ -9,6 +11,8 @@ import { spawn } from 'child_process';
 import axios from 'axios';
 import httpAdapter from 'axios/lib/adapters/http.js';
 import dotenv from 'dotenv';
+global.__TEST_RUN_ID__ = crypto.randomUUID();
+
 
 jest.setTimeout(60000);
 
